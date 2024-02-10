@@ -1,0 +1,59 @@
+package Live;
+
+import java.io.*;
+class Railway
+{
+    int n;
+    String name[];
+    String age[];
+    String gen[];
+    String train;
+    String dj,ds,ss,code; 
+    String train_Name[]={"Satabdi Express","Kandari Express","Rajdhani Express","Tamralipta Express","Duronto"};
+    Railway()throws IOException
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the number of passenger");
+        n=Integer.parseInt(br.readLine());
+        name = new String[n];
+        age = new String[n];
+        gen = new String[n];
+    }
+    public int input()throws IOException
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println();
+        System.out.println ("Enter train name :-");
+        train=br.readLine();
+        System.out.println("Enter coach no.:-");
+        code=br.readLine();
+
+        System.out.println("Enter name of maximum of" + n +" persons name:-");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("person name: "+(i+1)+")");
+            name[i]=br.readLine();
+        }
+        System.out.println("Enter Age:-");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("age: "+(i+1)+")");
+            age[i]=br.readLine();
+        }
+        System.out.println("Enter Gender:-");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("person: "+(i+1)+")");
+            gen[i]=br.readLine();
+
+        }
+        System.out.println("Enter start station:-");
+        ss=br.readLine();
+
+        System.out.println("Enter destination station:-");
+        ds=br.readLine(); 
+        //System.out.println("Enter date of journey:-");
+        //dj=br.readLine();
+        return n;
+    }
+}
